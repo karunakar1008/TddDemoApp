@@ -1,0 +1,27 @@
+﻿@model PairingTest.Web.Models.QuestionnaireViewModel
+<html>
+<head>
+    <title>@Model.QuestionnaireTitle</title>
+</head>
+<body>
+    <h1>Questionnaire</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Questionnaire title</th>
+                <th>Questions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> @Model.QuestionnaireTitle</td>
+                @foreach (var item in Model.QuestionsText)
+                {
+                    <td><table><tr><td>@item</td></tr></table></td>
+                }
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
